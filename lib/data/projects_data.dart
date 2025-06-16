@@ -1,0 +1,59 @@
+class ProjectsData {
+  final String imagePath;
+  final String title;
+  final String link;
+
+  ProjectsData(
+      {required this.imagePath, required this.title, required this.link});
+}
+
+const imagePath = "assets/images/projects/";
+
+List<ProjectsData> threeDProjectData = <ProjectsData>[
+  ProjectsData(
+    imagePath: "${imagePath}ThreeD-1.jpg",
+    title: "San Andreas Opening Scene",
+    link: "https://www.artstation.com",
+  ),
+  ProjectsData(
+    imagePath: "${imagePath}ThreeD-2.jpg",
+    title: "Lamborghini Aventador Design",
+    link: "https://www.artstation.com",
+  ),
+  ProjectsData(
+    imagePath: "${imagePath}ThreeD-3.jpg",
+    title: "Living Room Interior Design",
+    link: "https://www.artstation.com",
+  ),
+  ProjectsData(
+    imagePath: "${imagePath}ThreeD-4.jpg",
+    title: "Botanic Heaven",
+    link: "https://www.artstation.com",
+  ),
+  ProjectsData(
+    imagePath: "${imagePath}ThreeD-5.jpg",
+    title: "Scandinavian Bedroom Scene",
+    link: "https://www.artstation.com",
+  ),
+];
+
+List<ProjectsData> programmingData = <ProjectsData>[
+  ProjectsData(
+    imagePath: "${imagePath}UX-2.png",
+    title: "Marvel-Watch",
+    link: "https://github.com",
+  ),
+];
+
+List<ProjectsData> uxProjectData = <ProjectsData>[
+  ProjectsData(
+    imagePath: "${imagePath}UX-1.png",
+    title: "Portfolio Website",
+    link: "https://www.behance.net/gallery/123456789/Portfolio-Website",
+  ),
+  ProjectsData(
+    imagePath: "${imagePath}UX-2.png",
+    title: "E-commerce App",
+    link: "https://www.behance.net/gallery/987654321/E-commerce-App",
+  ),
+];

@@ -1,0 +1,61 @@
+name: Portfolio
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write  # Allows pushing changes to the repository
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # 2. Set up Flutter
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.24.5'
+          cache: true
+
+      # Run flutter doctor
+      - name: Run Flutter Doctor
+        run: flutter doctor -v
+
+
+      # 3. Install dependencies
+      - name: Install dependencies
+        run: flutter pub get
+
+      # 4. Set environment variables (Public Key and Private Key)
+      - name: Set environment variables
+        run: |
+          echo "PRIVATE_KEY=${{ secrets.PRIVATE_KEY }}" >> $GITHUB_ENV
+          echo "PUBLIC_KEY=${{ vars.PUBLIC_KEY }}" >> $GITHUB_ENV
+          echo "TEMPLATE_ID=${{ vars.TEMPLATE_ID }}" >> $GITHUB_ENV
+          echo "SERVICE_ID=${{ vars.SERVICE_ID }}" >> $GITHUB_ENV
+
+      # 5. Build the Flutter web app
+      - name: Build Flutter Web
+        run: flutter build web --release --web-renderer html \
+
+      # Making changes to index.html
+      - name: Modify index.html for base href
+        run: |
+          echo "Modifying index.html to set the correct base href for Github Pages"
+          sed -i 's|<base href="/">|<base href="/Portfolio-Website/">|g' build/web/index.html
+          
+
+      # 6. Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: build/web
+          token: ${{ secrets.GITHUB_TOKEN }}
