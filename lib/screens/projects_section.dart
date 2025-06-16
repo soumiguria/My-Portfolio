@@ -84,104 +84,104 @@ class _ProjectsSectionState extends State<ProjectsSection> {
               ),
             ),
             const SizedBox(height: 48),
-            Text(
-              "UI/UX Projects".toUpperCase(),
-              style: GoogleFonts.roboto(
-                  fontWeight: FontWeight.w500, fontSize: 24, letterSpacing: 5),
-            ),
-            const SizedBox(height: 48),
-            SizedBox(
-              height: isMobile ? 240 : 300,
-              child: InfiniteCarousel.builder(
-                controller: _controllerUIUX,
-                itemCount: uxProjectData.length,
-                itemExtent: isMobile ? 390 : 500,
-                velocityFactor: 0.1,
-                center: true,
-                anchor: 0,
-                physics: const BouncingScrollPhysics(),
-                itemBuilder: (context, index, realindex) {
-                  return ProjectCard(
-                    projectImage: uxProjectData[index].imagePath,
-                    projectTitle: uxProjectData[index].title,
-                    link: uxProjectData[index].link,
-                  );
-                },
-              ),
-            ),
-            const SizedBox(height: 24),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  ScrollButtons(
-                    icon: Icons.arrow_back_ios_new,
-                    onTap: () => _controllerUIUX.previousItem(
-                      duration: const Duration(seconds: 1),
-                      curve: Curves.easeInOut,
-                    ),
-                  ),
-                  ScrollButtons(
-                    icon: Icons.arrow_forward_ios,
-                    onTap: () => _controllerUIUX.nextItem(
-                      duration: const Duration(seconds: 1),
-                      curve: Curves.easeInOut,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            const SizedBox(height: 48),
-            Text(
-              "3D Projects".toUpperCase(),
-              style: GoogleFonts.roboto(
-                  fontWeight: FontWeight.w500, fontSize: 24, letterSpacing: 5),
-            ),
-            const SizedBox(height: 48),
-            SizedBox(
-              height: isMobile ? 240 : 300,
-              child: InfiniteCarousel.builder(
-                controller: _controller3D,
-                itemCount: 5,
-                itemExtent: isMobile ? 390 : 500,
-                velocityFactor: 0.1,
-                center: true,
-                anchor: 0,
-                physics: const BouncingScrollPhysics(),
-                itemBuilder: (context, index, realindex) {
-                  return ProjectCard(
-                    projectImage: threeDProjectData[index].imagePath,
-                    projectTitle: threeDProjectData[index].title,
-                    link: threeDProjectData[index].link,
-                  );
-                },
-              ),
-            ),
-            const SizedBox(height: 24),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  ScrollButtons(
-                    icon: Icons.arrow_back_ios_new,
-                    onTap: () => _controller3D.previousItem(
-                      duration: const Duration(seconds: 1),
-                      curve: Curves.easeInOut,
-                    ),
-                  ),
-                  ScrollButtons(
-                    icon: Icons.arrow_forward_ios,
-                    onTap: () => _controller3D.nextItem(
-                      duration: const Duration(seconds: 1),
-                      curve: Curves.easeInOut,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            const SizedBox(height: 100),
+            // Text(
+            //   "UI/UX Projects".toUpperCase(),
+            //   style: GoogleFonts.roboto(
+            //       fontWeight: FontWeight.w500, fontSize: 24, letterSpacing: 5),
+            // ),
+            // const SizedBox(height: 48),
+            // SizedBox(
+            //   height: isMobile ? 240 : 300,
+            //   child: InfiniteCarousel.builder(
+            //     controller: _controllerUIUX,
+            //     itemCount: uxProjectData.length,
+            //     itemExtent: isMobile ? 390 : 500,
+            //     velocityFactor: 0.1,
+            //     center: true,
+            //     anchor: 0,
+            //     physics: const BouncingScrollPhysics(),
+            //     itemBuilder: (context, index, realindex) {
+            //       return ProjectCard(
+            //         projectImage: uxProjectData[index].imagePath,
+            //         projectTitle: uxProjectData[index].title,
+            //         link: uxProjectData[index].link,
+            //       );
+            //     },
+            //   ),
+            // ),
+            // const SizedBox(height: 24),
+            // Padding(
+            //   padding: const EdgeInsets.symmetric(horizontal: 24.0),
+            //   child: Row(
+            //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //     children: [
+            //       ScrollButtons(
+            //         icon: Icons.arrow_back_ios_new,
+            //         onTap: () => _controllerUIUX.previousItem(
+            //           duration: const Duration(seconds: 1),
+            //           curve: Curves.easeInOut,
+            //         ),
+            //       ),
+            //       ScrollButtons(
+            //         icon: Icons.arrow_forward_ios,
+            //         onTap: () => _controllerUIUX.nextItem(
+            //           duration: const Duration(seconds: 1),
+            //           curve: Curves.easeInOut,
+            //         ),
+            //       ),
+            //     ],
+            //   ),
+            // ),
+            // const SizedBox(height: 48),
+            // Text(
+            //   "3D Projects".toUpperCase(),
+            //   style: GoogleFonts.roboto(
+            //       fontWeight: FontWeight.w500, fontSize: 24, letterSpacing: 5),
+            // ),
+            // const SizedBox(height: 48),
+            // SizedBox(
+            //   height: isMobile ? 240 : 300,
+            //   child: InfiniteCarousel.builder(
+            //     controller: _controller3D,
+            //     itemCount: 5,
+            //     itemExtent: isMobile ? 390 : 500,
+            //     velocityFactor: 0.1,
+            //     center: true,
+            //     anchor: 0,
+            //     physics: const BouncingScrollPhysics(),
+            //     itemBuilder: (context, index, realindex) {
+            //       return ProjectCard(
+            //         projectImage: threeDProjectData[index].imagePath,
+            //         projectTitle: threeDProjectData[index].title,
+            //         link: threeDProjectData[index].link,
+            //       );
+            //     },
+            //   ),
+            // ),
+            // const SizedBox(height: 24),
+            // Padding(
+            //   padding: const EdgeInsets.symmetric(horizontal: 24.0),
+            //   child: Row(
+            //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //     children: [
+            //       ScrollButtons(
+            //         icon: Icons.arrow_back_ios_new,
+            //         onTap: () => _controller3D.previousItem(
+            //           duration: const Duration(seconds: 1),
+            //           curve: Curves.easeInOut,
+            //         ),
+            //       ),
+            //       ScrollButtons(
+            //         icon: Icons.arrow_forward_ios,
+            //         onTap: () => _controller3D.nextItem(
+            //           duration: const Duration(seconds: 1),
+            //           curve: Curves.easeInOut,
+            //         ),
+            //       ),
+            //     ],
+            //   ),
+            // ),
+            // const SizedBox(height: 100),
           ],
         ),
       ),
