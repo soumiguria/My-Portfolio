@@ -303,21 +303,25 @@ class TimelineCard extends StatelessWidget {
       margin: const EdgeInsets.only(right: 60, left: 32),
       padding: const EdgeInsets.all(24),
       decoration: BoxDecoration(
-          border: Border.all(
-              color: const Color.fromARGB(255, 209, 209, 209), width: 0.5),
-          color: Theme.of(context).colorScheme.primary,
-          borderRadius: BorderRadius.circular(12),
-          boxShadow: [
-            BoxShadow(
-                blurRadius: 20,
-                offset: const Offset(-10, -10),
-                color: Theme.of(context).colorScheme.surface),
-            BoxShadow(
-              blurRadius: 20,
-              offset: const Offset(10, 10),
-              color: Theme.of(context).colorScheme.shadow,
-            )
-          ]),
+        border: Border.all(
+          color: Theme.of(context).colorScheme.secondary.withOpacity(0.3),
+          width: 1,
+        ),
+        color: Theme.of(context).colorScheme.primary,
+        borderRadius: BorderRadius.circular(12),
+        boxShadow: [
+          BoxShadow(
+            blurRadius: 20,
+            offset: const Offset(-10, -10),
+            color: Theme.of(context).colorScheme.surface,
+          ),
+          BoxShadow(
+            blurRadius: 20,
+            offset: const Offset(10, 10),
+            color: Theme.of(context).colorScheme.shadow,
+          ),
+        ],
+      ),
       child: child,
     );
   }

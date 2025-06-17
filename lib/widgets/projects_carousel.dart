@@ -8,7 +8,10 @@ class ProjectCard extends StatefulWidget {
   final String projectTitle;
   final String link;
   const ProjectCard(
-      {super.key, required this.projectImage, required this.projectTitle, required this.link});
+      {super.key,
+      required this.projectImage,
+      required this.projectTitle,
+      required this.link});
 
   @override
   State<ProjectCard> createState() => _ProjectCardState();
@@ -27,7 +30,7 @@ class _ProjectCardState extends State<ProjectCard> {
         _isCardHovered = false;
       }),
       child: GestureDetector(
-        onTap: (){
+        onTap: () {
           launchUrl(
             Uri.parse(widget.link),
             mode: LaunchMode.inAppBrowserView,
@@ -59,7 +62,9 @@ class _ProjectCardState extends State<ProjectCard> {
                 borderRadius: BorderRadius.circular(14),
                 child: ColorFiltered(
                   colorFilter: ColorFilter.mode(
-                    (_isCardHovered || !isDesktop) ? Colors.transparent : Colors.grey,
+                    (_isCardHovered || !isDesktop)
+                        ? Colors.transparent
+                        : Colors.grey,
                     BlendMode.saturation,
                   ),
                   child: Image.asset(
@@ -80,11 +85,26 @@ class _ProjectCardState extends State<ProjectCard> {
                         decoration: BoxDecoration(
                           color: Theme.of(context).colorScheme.primary,
                           borderRadius: BorderRadius.circular(12),
+                          border: Border.all(
+                            color: Theme.of(context).colorScheme.secondary,
+                            width: 1,
+                          ),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Theme.of(context)
+                                  .colorScheme
+                                  .secondary
+                                  .withOpacity(0.3),
+                              blurRadius: 8,
+                              offset: const Offset(0, 4),
+                            ),
+                          ],
                         ),
                         child: Text(
                           widget.projectTitle,
                           style: GoogleFonts.roboto(
                             fontWeight: FontWeight.w500,
+                            color: Theme.of(context).colorScheme.secondary,
                           ),
                         ),
                       )

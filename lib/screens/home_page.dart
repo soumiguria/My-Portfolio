@@ -388,14 +388,32 @@ class _HomePageState extends State<HomePage> {
                         decoration: BoxDecoration(
                           color: Theme.of(context).colorScheme.primary,
                           border: Border.all(
-                              width: 2,
-                              color: Theme.of(context).colorScheme.secondary),
+                            width: 2,
+                            color: Theme.of(context)
+                                .colorScheme
+                                .secondary
+                                .withOpacity(0.3),
+                          ),
                           borderRadius: BorderRadius.circular(24),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Theme.of(context)
+                                  .colorScheme
+                                  .secondary
+                                  .withOpacity(0.2),
+                              blurRadius: 8,
+                              offset: const Offset(0, 4),
+                            ),
+                          ],
                         ),
                         child: TextField(
                           controller: messageController,
                           cursorColor: Theme.of(context).colorScheme.secondary,
                           maxLines: 10,
+                          style: GoogleFonts.roboto(
+                            color: Theme.of(context).colorScheme.secondary,
+                            fontWeight: FontWeight.w500,
+                          ),
                           decoration: InputDecoration(
                             border: InputBorder.none,
                             hintText: "Enter your Message",

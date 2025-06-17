@@ -47,6 +47,12 @@ class _CertificateCardState extends State<CertificateCard> {
           decoration: BoxDecoration(
             color: Theme.of(context).colorScheme.primary,
             borderRadius: BorderRadius.circular(16),
+            border: Border.all(
+              color: _isHover
+                  ? Theme.of(context).colorScheme.secondary
+                  : Theme.of(context).colorScheme.secondary.withOpacity(0.3),
+              width: _isHover ? 2 : 1,
+            ),
             boxShadow: [
               BoxShadow(
                 offset:

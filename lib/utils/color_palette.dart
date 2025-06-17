@@ -17,8 +17,8 @@ ThemeData darkMode = ThemeData(
   colorScheme: const ColorScheme.dark(
     surface: Color.fromARGB(255, 39, 39, 39),
     primary: Color(0xFF303030), // Dark primary color
-    secondary: Color(0xFFE5E5E5), // Lighter secondary color
-    tertiary: Color(0xFFB4B4B4), // A soft gray
+    secondary: Color(0xFFFFD700), // Yellow accent color
+    tertiary: Color(0xFFFFD700), // Yellow accent for tertiary elements
     shadow: Color(0xFF1C1C1C), // Dark shadow color for contrast
     primaryContainer: Color(0xFF424242), // Darker primary container
     onPrimaryContainer: Color(0Xff303030), // Light text/icon on dark container
