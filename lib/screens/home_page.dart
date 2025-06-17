@@ -16,6 +16,7 @@ import 'package:portfolio/widgets/neumorphism_button.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:portfolio/widgets/snowfall_background.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -66,7 +67,8 @@ class _HomePageState extends State<HomePage> {
       appBarOptionFontSize = 18;
       memojiSize = 80;
     }
-    return Scaffold(
+
+    Widget scaffold = Scaffold(
       backgroundColor: Theme.of(context).colorScheme.primary,
 
       appBar: PreferredSize(
@@ -484,6 +486,8 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
     );
+
+    return isDarkMode ? SnowfallBackground(child: scaffold) : scaffold;
   }
 
   void _sendEmail() async {
