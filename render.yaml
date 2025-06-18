@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: flutter-web
+    repo: https://github.com/YOUR_USERNAME/YOUR_REPO
+    branch: main
+    buildCommand: |
+      git clone https://github.com/flutter/flutter.git -b stable --depth 1
+      export PATH="$PWD/flutter/bin:$PATH"
+      flutter doctor
+      flutter build web --release
+    staticPublishPath: build/web
