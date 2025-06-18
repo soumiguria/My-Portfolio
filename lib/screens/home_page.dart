@@ -537,10 +537,15 @@ class _HomePageState extends State<HomePage> {
       }
 
       // Get EmailJS credentials from environment variables
-      final publicKey = dotenv.env['PUBLIC_KEY'] ?? '';
-      final privateKey = dotenv.env['PRIVATE_KEY'] ?? '';
-      final serviceId = dotenv.env['SERVICE_ID'] ?? '';
-      final templateId = dotenv.env['TEMPLATE_ID'] ?? '';
+      // final publicKey = dotenv.env['PUBLIC_KEY'] ?? '';
+      // final privateKey = dotenv.env['PRIVATE_KEY'] ?? '';
+      // final serviceId = dotenv.env['SERVICE_ID'] ?? '';
+      // final templateId = dotenv.env['TEMPLATE_ID'] ?? '';
+
+      const publicKey = String.fromEnvironment('PUBLIC_KEY');
+      const privateKey = String.fromEnvironment('PRIVATE_KEY');
+      const serviceId = String.fromEnvironment('SERVICE_ID');
+      const templateId = String.fromEnvironment('TEMPLATE_ID');
 
       if (publicKey.isEmpty ||
           privateKey.isEmpty ||
