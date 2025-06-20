@@ -25476,7 +25476,7 @@ this.c=c},
 at7(){var s=0,r=A.R(t.H),q,p,o,n,m,l,k
 var $async$at7=A.S(function(a,b){if(a===1)return A.O(b,r)
 while(true)switch(s){case 0:s=2
-return A.a_($.aHT().Am(".env"),$async$at7)
+return A.a_($.aHT().Am("assets/env.txt"),$async$at7)
 case 2:if($.a9==null)A.aBX()
 q=$.a9
 q.toString
