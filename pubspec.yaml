@@ -45,7 +45,7 @@ flutter:
     - assets/images/certficate_icons/mysql.png
     - assets/images/certficate_icons/python.png
     - assets/images/projects/
-    - assets/.env
+    - assets/env.txt
 
   # fonts:
   #   - family: Schyler
