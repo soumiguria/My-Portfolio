@@ -39,9 +39,19 @@ List<ProjectsData> threeDProjectData = <ProjectsData>[
 
 List<ProjectsData> programmingData = <ProjectsData>[
   ProjectsData(
-    imagePath: "${imagePath}UX-2.png",
-    title: "Marvel-Watch",
+    imagePath: "${imagePath}UX-3.jpeg",
+    title: "ChatChat Assistant",
     link: "https://github.com",
+  ),
+  ProjectsData(
+    imagePath: "${imagePath}UX-2.jpg",
+    title: "Bhakti",
+    link: "https://github.com/soumiguria/Bhakti",
+  ),
+  ProjectsData(
+    imagePath: "${imagePath}UX-1.jpg",
+    title: "Innerbhakti",
+    link: "https://github.com/soumiguria/innerBhakti_frontend",
   ),
 ];
 

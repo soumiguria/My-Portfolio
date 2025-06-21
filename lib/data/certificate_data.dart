@@ -19,8 +19,24 @@ class CertificateData {
 List<CertificateData> certificateData = <CertificateData>[
   CertificateData(
       certificateGiver: "udemy.png",
-      certificateTopic: "python.png",
-      title: "Introduction to Python Programming",
+      certificateTopic: "java.png",
+      title: "Project Development using Java for beginners",
+      certificateAuthority: "Udemy",
+      validityDate: "September 2023",
+      link:
+          "https://www.udemy.com/certificate/UC-b79c9c19-6468-41b2-b35f-d94fa4625799/"),
+  CertificateData(
+      certificateGiver: "udemy.png",
+      certificateTopic: "java.png",
+      title: "Project Development using Java for beginners",
+      certificateAuthority: "Udemy",
+      validityDate: "September 2023",
+      link:
+          "https://www.udemy.com/certificate/UC-b79c9c19-6468-41b2-b35f-d94fa4625799/"),
+  CertificateData(
+      certificateGiver: "udemy.png",
+      certificateTopic: "java.png",
+      title: "Project Development using Java for beginners",
       certificateAuthority: "Udemy",
       validityDate: "September 2023",
       link:

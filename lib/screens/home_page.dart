@@ -127,7 +127,7 @@ class _HomePageState extends State<HomePage> {
                     child: GestureDetector(
                       onTap: () {
                         const resumeLink =
-                            "https://drive.google.com/file/d/1khNmaynEkLJ2bO48Mi9nG1DcNql9IpiM/view?usp=sharing";
+                            "https://drive.google.com/file/d/1H8HhqUOE6zaiS_vmdC1NQABl-K-O9gba/view?usp=sharing";
                         launchUrl(
                           Uri.parse(resumeLink),
                           mode: LaunchMode.inAppBrowserView,
@@ -537,15 +537,15 @@ class _HomePageState extends State<HomePage> {
       }
 
       // Get EmailJS credentials from environment variables
-      // final publicKey = dotenv.env['PUBLIC_KEY'] ?? '';
-      // final privateKey = dotenv.env['PRIVATE_KEY'] ?? '';
-      // final serviceId = dotenv.env['SERVICE_ID'] ?? '';
-      // final templateId = dotenv.env['TEMPLATE_ID'] ?? '';
+      final publicKey = dotenv.env['PUBLIC_KEY'] ?? '';
+      final privateKey = dotenv.env['PRIVATE_KEY'] ?? '';
+      final serviceId = dotenv.env['SERVICE_ID'] ?? '';
+      final templateId = dotenv.env['TEMPLATE_ID'] ?? '';
 
-      const publicKey = String.fromEnvironment('PUBLIC_KEY');
-      const privateKey = String.fromEnvironment('PRIVATE_KEY');
-      const serviceId = String.fromEnvironment('SERVICE_ID');
-      const templateId = String.fromEnvironment('TEMPLATE_ID');
+      // const publicKey = String.fromEnvironment('PUBLIC_KEY');
+      // const privateKey = String.fromEnvironment('PRIVATE_KEY');
+      // const serviceId = String.fromEnvironment('SERVICE_ID');
+      // const templateId = String.fromEnvironment('TEMPLATE_ID');
 
       if (publicKey.isEmpty ||
           privateKey.isEmpty ||
