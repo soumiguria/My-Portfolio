@@ -127,7 +127,7 @@ class _HomePageState extends State<HomePage> {
                     child: GestureDetector(
                       onTap: () {
                         const resumeLink =
-                            "https://drive.google.com/file/d/1BhOW9fy8A9Hpf3rt2xGBbcBIJc5bJm5l/view?usp=sharing";
+                            "https://drive.google.com/file/d/1DpSkwNqMno2xbfoV4Iwa00PmxRZI-tl-/view?usp=sharing";
                         launchUrl(
                           Uri.parse(resumeLink),
                           mode: LaunchMode.inAppBrowserView,
