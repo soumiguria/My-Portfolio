@@ -39,9 +39,15 @@ List<ProjectsData> threeDProjectData = <ProjectsData>[
 
 List<ProjectsData> programmingData = <ProjectsData>[
   ProjectsData(
+    imagePath: "${imagePath}UX-4.jpeg",
+    title: "Hospital-Management-System",
+    link: "https://github.com/soumiguria/hospital",
+  ),
+  ProjectsData(
     imagePath: "${imagePath}UX-3.jpeg",
     title: "ChatChat Assistant",
-    link: "https://github.com",
+    link:
+        "https://drive.google.com/file/d/1eG0ZhhnKSD6O8bD9lV__lj65gCcdxlOA/view?usp=sharing",
   ),
   ProjectsData(
     imagePath: "${imagePath}UX-2.jpg",

@@ -127,7 +127,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
                 child: GestureDetector(
                   onTap: () {
                     const resumeLink =
-                        "https://drive.google.com/file/d/1H8HhqUOE6zaiS_vmdC1NQABl-K-O9gba/view?usp=sharing";
+                        "https://drive.google.com/file/d/1W5lqdtjwbLzcrVuowO0SeghetA8cLzLK/view?usp=sharing";
                     launchUrl(
                       Uri.parse(resumeLink),
                       mode: LaunchMode.inAppWebView,
