@@ -59,6 +59,11 @@ List<ProjectsData> programmingData = <ProjectsData>[
     title: "Innerbhakti",
     link: "https://github.com/soumiguria/innerBhakti_frontend",
   ),
+  ProjectsData(
+    imagePath: "${imagePath}UX-5.jpeg",
+    title: "Pet Adoption",
+    link: "https://github.com/soumiguria/pet_adoption",
+  ),
 ];
 
 List<ProjectsData> uxProjectData = <ProjectsData>[
