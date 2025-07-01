@@ -189,97 +189,161 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
 
-      drawer: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(16),
-          child: Drawer(
-            backgroundColor: Theme.of(context).colorScheme.primary,
-            child: Center(
-              child: ListView(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
-                children: <Widget>[
-                  const SizedBox(height: 80),
-                  ListTile(
-                    contentPadding:
-                        const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-                    onTap: () {
-                      launchUrl(
-                        Uri.parse("https://github.com/soumiguria"),
-                        mode: LaunchMode.inAppBrowserView,
-                      );
-                    },
-                    title: Text(
-                      "GitHub",
-                      style: GoogleFonts.roboto(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18,
-                      ),
-                    ),
-                    leading: NeumorphismButton(
-                        link: "https://github.com/soumiguria",
-                        child: SvgPicture.asset(
-                          "assets/icons/github.svg",
-                          height: 32,
-                          width: 32,
-                        )),
-                  ),
-                  const SizedBox(height: 24),
-                  ListTile(
-                    contentPadding:
-                        const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-                    onTap: () {
-                      launchUrl(
-                        Uri.parse("https://x.com/guria_soumi"),
-                        mode: LaunchMode.inAppBrowserView,
-                      );
-                    },
-                    title: Text(
-                      "Twitter/X",
-                      style: GoogleFonts.roboto(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18,
-                      ),
-                    ),
-                    leading: NeumorphismButton(
-                        link: "https://x.com/guria_soumi",
-                        child: SvgPicture.asset(
-                          "assets/icons/twitter.svg",
-                          height: 32,
-                          width: 32,
-                        )),
-                  ),
-                  const SizedBox(height: 24),
-                  ListTile(
-                    contentPadding:
-                        const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-                    onTap: () {
-                      launchUrl(
-                        Uri.parse(
-                            "https://www.linkedin.com/in/soumi-guria-8882b224a/"),
-                        mode: LaunchMode.inAppBrowserView,
-                      );
-                    },
-                    title: Text(
-                      "LinkedIn",
-                      style: GoogleFonts.roboto(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18,
-                      ),
-                    ),
-                    leading: NeumorphismButton(
-                        link:
-                            "https://www.linkedin.com/in/soumi-guria-8882b224a/",
-                        child: SvgPicture.asset(
-                          "assets/icons/linkedin.svg",
-                          height: 32,
-                          width: 32,
-                        )),
-                  ),
-                ],
+      // drawer: Padding(
+      //   padding: const EdgeInsets.all(16.0),
+      //   child: ClipRRect(
+      //     borderRadius: BorderRadius.circular(16),
+      //     child: Drawer(
+      //       backgroundColor: Theme.of(context).colorScheme.primary,
+      //       child: Center(
+      //         child: ListView(
+      //           padding:
+      //               const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+      //           children: <Widget>[
+      //             const SizedBox(height: 80),
+      //             ListTile(
+      //               contentPadding:
+      //                   const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+      //               onTap: () {
+      //                 launchUrl(
+      //                   Uri.parse("https://github.com/soumiguria"),
+      //                   mode: LaunchMode.inAppBrowserView,
+      //                 );
+      //               },
+      //               title: Text(
+      //                 "GitHub",
+      //                 style: GoogleFonts.roboto(
+      //                   fontWeight: FontWeight.bold,
+      //                   fontSize: 18,
+      //                 ),
+      //               ),
+      //               leading: NeumorphismButton(
+      //                   link: "https://github.com/soumiguria",
+      //                   child: SvgPicture.asset(
+      //                     "assets/icons/github.svg",
+      //                     height: 32,
+      //                     width: 32,
+      //                   )),
+      //             ),
+      //             const SizedBox(height: 24),
+      //             ListTile(
+      //               contentPadding:
+      //                   const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+      //               onTap: () {
+      //                 launchUrl(
+      //                   Uri.parse("https://x.com/guria_soumi"),
+      //                   mode: LaunchMode.inAppBrowserView,
+      //                 );
+      //               },
+      //               title: Text(
+      //                 "Twitter/X",
+      //                 style: GoogleFonts.roboto(
+      //                   fontWeight: FontWeight.bold,
+      //                   fontSize: 18,
+      //                 ),
+      //               ),
+      //               leading: NeumorphismButton(
+      //                   link: "https://x.com/guria_soumi",
+      //                   child: SvgPicture.asset(
+      //                     "assets/icons/twitter.svg",
+      //                     height: 32,
+      //                     width: 32,
+      //                   )),
+      //             ),
+      //             const SizedBox(height: 24),
+      //             ListTile(
+      //               contentPadding:
+      //                   const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+      //               onTap: () {
+      //                 launchUrl(
+      //                   Uri.parse(
+      //                       "https://www.linkedin.com/in/soumi-guria-8882b224a/"),
+      //                   mode: LaunchMode.inAppBrowserView,
+      //                 );
+      //               },
+      //               title: Text(
+      //                 "LinkedIn",
+      //                 style: GoogleFonts.roboto(
+      //                   fontWeight: FontWeight.bold,
+      //                   fontSize: 18,
+      //                 ),
+      //               ),
+      //               leading: NeumorphismButton(
+      //                   link:
+      //                       "https://www.linkedin.com/in/soumi-guria-8882b224a/",
+      //                   child: SvgPicture.asset(
+      //                     "assets/icons/linkedin.svg",
+      //                     height: 32,
+      //                     width: 32,
+      //                   )),
+      //             ),
+      //             ListTile(
+      //               contentPadding:
+      //                   const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+      //               onTap: () {
+      //                 launchUrl(
+      //                   Uri.parse("https://leetcode.com/u/soumi_guria/"),
+      //                   mode: LaunchMode.inAppBrowserView,
+      //                 );
+      //               },
+      //               title: Text(
+      //                 "Leetcode",
+      //                 style: GoogleFonts.roboto(
+      //                   fontWeight: FontWeight.bold,
+      //                   fontSize: 18,
+      //                 ),
+      //               ),
+      //               leading: NeumorphismButton(
+      //                   link: "https://leetcode.com/u/soumi_guria/",
+      //                   child: SvgPicture.asset(
+      //                     "assets/icons/leetocde.svg",
+      //                     height: 32,
+      //                     width: 32,
+      //                   )),
+      //             ),
+      //           ],
+      //         ),
+      //       ),
+      //     ),
+      //   ),
+      // ),
+
+      drawer: Drawer(
+        backgroundColor: Theme.of(context).colorScheme.primary,
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: ListView(
+            padding: const EdgeInsets.symmetric(vertical: 32),
+            children: [
+              const SizedBox(height: 80),
+              _buildDrawerTile(
+                context,
+                title: "GitHub",
+                url: "https://github.com/soumiguria",
+                iconPath: "assets/icons/github.svg",
               ),
-            ),
+              const SizedBox(height: 24),
+              _buildDrawerTile(
+                context,
+                title: "Twitter/X",
+                url: "https://x.com/guria_soumi",
+                iconPath: "assets/icons/twitter.svg",
+              ),
+              const SizedBox(height: 24),
+              _buildDrawerTile(
+                context,
+                title: "LinkedIn",
+                url: "https://www.linkedin.com/in/soumi-guria-8882b224a/",
+                iconPath: "assets/icons/linkedin.svg",
+              ),
+              const SizedBox(height: 24),
+              _buildDrawerTile(
+                context,
+                title: "Leetcode",
+                url: "https://leetcode.com/u/soumi_guria/",
+                iconPath: "assets/icons/leetcode.svg",
+              ),
+            ],
           ),
         ),
       ),
@@ -623,4 +687,33 @@ class _HomePageState extends State<HomePage> {
       }
     }
   }
+}
+
+Widget _buildDrawerTile(
+  BuildContext context, {
+  required String title,
+  required String url,
+  required String iconPath,
+}) {
+  return ListTile(
+    contentPadding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+    onTap: () {
+      launchUrl(Uri.parse(url), mode: LaunchMode.inAppBrowserView);
+    },
+    title: Text(
+      title,
+      style: GoogleFonts.roboto(
+        fontWeight: FontWeight.bold,
+        fontSize: 18,
+      ),
+    ),
+    leading: NeumorphismButton(
+      link: url,
+      child: SvgPicture.asset(
+        iconPath,
+        height: 32,
+        width: 32,
+      ),
+    ),
+  );
 }

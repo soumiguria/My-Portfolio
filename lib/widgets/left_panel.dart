@@ -37,6 +37,15 @@ class LeftPanel extends StatelessWidget {
               width: 32,
               color: Theme.of(context).colorScheme.secondary,
             )),
+        const SizedBox(height: 24),
+        NeumorphismButton(
+            link: "https://leetcode.com/u/soumi_guria/",
+            child: SvgPicture.asset(
+              "assets/icons/leetcode.svg",
+              height: 32,
+              width: 32,
+              color: Theme.of(context).colorScheme.secondary,
+            )),
       ],
     );
   }
