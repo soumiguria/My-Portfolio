@@ -44,12 +44,6 @@ List<ProjectsData> programmingData = <ProjectsData>[
     link: "https://github.com/soumiguria/hospital",
   ),
   ProjectsData(
-    imagePath: "${imagePath}UX-3.jpeg",
-    title: "ChatChat Assistant",
-    link:
-        "https://drive.google.com/file/d/1eG0ZhhnKSD6O8bD9lV__lj65gCcdxlOA/view?usp=sharing",
-  ),
-  ProjectsData(
     imagePath: "${imagePath}UX-2.jpg",
     title: "Bhakti",
     link: "https://github.com/soumiguria/Bhakti",
@@ -68,13 +62,14 @@ List<ProjectsData> programmingData = <ProjectsData>[
 
 List<ProjectsData> uxProjectData = <ProjectsData>[
   ProjectsData(
-    imagePath: "${imagePath}UX-1.png",
-    title: "Portfolio Website",
-    link: "https://www.behance.net/gallery/123456789/Portfolio-Website",
+    imagePath: "assets/images/projects/UX-6.jpeg",
+    title: "Crewbella",
+    link: "https://play.google.com/store/apps/details?id=com.crewbella.app",
   ),
   ProjectsData(
-    imagePath: "${imagePath}UX-2.png",
-    title: "E-commerce App",
-    link: "https://www.behance.net/gallery/987654321/E-commerce-App",
+    imagePath: "${imagePath}UX-3.jpeg",
+    title: "ChatChat Assistant",
+    link:
+        "https://drive.google.com/file/d/1eG0ZhhnKSD6O8bD9lV__lj65gCcdxlOA/view?usp=sharing",
   ),
 ];
